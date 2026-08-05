@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+coverage.xml
+*.coverage.xml
+dist/
+build/
+
+# Ollama 모델 데이터 (로컬 실행 시)
+.ollama/
+
+# 오디오 산출물 (로컬 테스트)
+*.wav
+*.mp3
+
+# 기타
+*.log
+.DS_Store

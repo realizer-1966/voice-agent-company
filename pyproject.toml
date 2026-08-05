@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-agent-company"
+version = "0.1.0"
+description = "Voice-based AI agent dev company: SuperTonic TTS + Android SpeechRecognizer STT + Ollama LLM (local/cloud)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+vac = "vac.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["vac*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --cov=vac --cov-report=term-missing"
